@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Inconsolata:wght@700;900&family=Inter:wght@700&family=Open+Sans:ital,wght@1,300&family=Roboto+Condensed&family=Roboto:wght@100;400&display=swap');
+/*font-family: 'Imprima', sans-serif;
+font-family: 'Inconsolata', monospace;
+font-family: 'Inter', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;*/
+/**************** HOME ********************************/
+* {
+    margin: 0; /*Distancia da tag que você */
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    font-size: 100%;
+}
+.cabecalho-pai{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /*padding: 24px; margem*/
+    background-color: #60A8C1;
+    box-sizing: border-box;
+    border-bottom: 1px solid #FFFFFF;
+}
+.cabecalho-logo{
+    width: 100px;
+    height: 100px;
+}
+.cabecalho-links{
+    display: flex;
+    gap: 35px; /*margem*/
+    align-items: baseline; /*Deixa o texto alinhado*/
+}
+.cabecalho-itens{
+    font-family: 'Sarala', sans-serif; 
+    font-style: normal; 
+    font-weight: 200; /*peso da fonte - quanto maior mais em negrito*/
+    font-size: 15px; /*tamanho da fonte*/
+    color: #FFFFFF;  /*cor da fonte*/
+}
+.cabecalho-botao{
+    font-family: 'Sarala', sans-serif;
+    background: #C9232A;
+    border-radius: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    width: 140px;
+    height: 50px;
+    color: #FFFFFF;
+    border: none;
+}
+/*MEIO DA PÁGINA*/
+.conteudo-principal{
+    height: fit-content;
+    padding: 100px 0;
+    background-size: cover;
+    background-image: url('./assets/fundo_thebigbang.jpg');
+}
+.conteudo-principal-sinopse{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 60px;
+    gap: 50px;
+}
+/*TEXTOS*/
+.principal-titulo{
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: -30px;
+    color: #FFFFFF;
+}
+.principal-subtitulo{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 170px;
+    color: #000000;
+}
+.quadrado-azul1{
+    width: 496px;
+    height: 200px;
+    background: #B0E5F7;
+    border-radius: 50px;
+}
+.quadrado-azul2{
+    width: 496px;
+    height: 200px;
+    background: #B0E5F7;
+    border-radius: 50px;
+}
+.sinopse-1{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    margin-top: 15px;
+
+}
+.sinopse-2{
+    font-family: 'Open Sans', sans-serif; 
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+    margin-top: -30px;
+}
+.icone_atomo{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.icone_spok{
+    width: 60px;
+    height: 60px;
+    margin-left: 420px;
+    margin-top: -40px;
+}
+.icone_geek{
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.icone_flash{
+    width: 60px;
+    height: 60px;
+    margin-left: 420px;
+    margin-top: -20px;
+}
+.rodape{
+    background: #61A7C1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.texto_rodape{
+    font-family: 'Inter', sans-serif;;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 15px;
+    color: #000000;
+
+}
+/******************** PERSONAGENS ****************************/
+.conteudo-principal-personagens{
+    background: #60A8C1;
+}
+.conteudo-principal-personagens-principais{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.titulo-personagens{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    /*margin-left: 300px;*/
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 800px;
+    height: 100px;
+    background: #971217;
+    border-radius: 3px;
+    color: #FFFFFF;
+}
+.quadrado-sheldon{
+    width: 1247px;
+    height: 644px;
+    background: #B8D9CD;
+    border-radius: 25px;
+}
+.quadrado-leonard{
+    width: 1247px;
+    height: 490px;
+    background: #F9D58F;
+    border-radius: 25px;
+}
+.quadrado-penny{
+    width: 1247px;
+    height: 490px;
+}
+/******************** LOGIN ****************************/
+.conteudo-principal-login{
+    height: fit-content;
+    padding: 100px 0;
+    background-size: cover;
+    background-image: url('./assets/thebig_login.png');
+}
+.caixa-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: 30px;
+    width: 528px;
+    height: 580px;
+    background: rgba(201, 35, 42, 0.93);
+    border-radius: 49px;
+    font-family: 'Imprima', sans-serif;
+    font-style: normal;
+font-weight: 400;
+font-size: 30px;
+line-height: 28px;
+    color: #FFFFFF;
+}
+.link-conta{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+.botao-login{
+    width: 197px;
+    height: 57px;
+    left: 203px;
+    top: 692px;
+    background: rgba(130, 178, 196, 0.97);
+    border-radius: 6px;
+    font-family: 'Imprima', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+}
