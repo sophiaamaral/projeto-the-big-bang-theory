@@ -6,13 +6,14 @@
 comandos para mysql - banco local - ambiente de desenvolvimento
 */
 
-CREATE DATABASE aquatech;
+CREATE DATABASE thebigbang;
 
-USE aquatech;
+USE thebigbang;
 
-CREATE TABLE usuario (
+CREATE TABLE cadastro (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
+	nome_Completo VARCHAR(50),
+	dtNasc VARCHAR(50),
 	email VARCHAR(50),
 	senha VARCHAR(50)
 );

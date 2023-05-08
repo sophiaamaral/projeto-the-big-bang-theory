@@ -173,7 +173,7 @@ body {
 .titulo-personagens{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     margin-top: 60px;
     /*margin-left: 300px;*/
@@ -223,9 +223,9 @@ body {
     border-radius: 49px;
     font-family: 'Imprima', sans-serif;
     font-style: normal;
-font-weight: 400;
-font-size: 30px;
-line-height: 28px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
     color: #FFFFFF;
 }
 .link-conta{
@@ -248,4 +248,74 @@ line-height: 28px;
     line-height: 28px;
     text-align: center;
     color: #FFFFFF;
+    border: none;
+}
+.caixa-login input{
+    width: 383px;
+    height: 56px;
+    background: rgba(231, 238, 240, 0.92);
+    border-radius: 20px;
+    border: none;
+}
+/******************** CADASTRO ****************************/
+.conteudo-principal-cadastro{
+    height: fit-content;
+    padding: 100px 0;
+    background-size: cover;
+    background-image: url('../assets/thebig_login.png');
+}
+.caixa-cadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: 30px;
+    width: 528px;
+    height: 600px;
+    background: rgba(201, 35, 42, 0.93);
+    border-radius: 49px;
+    font-family: 'Imprima', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+.link-login{
+    margin-left: 5px;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 15px;
+}
+.botao-cadastro{
+    margin-top: 30px;
+    width: 197px;
+    height: 57px;
+    background: rgba(130, 178, 196, 0.97);
+    border-radius: 6px;
+    font-family: 'Imprima', sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+    border: none;
+}
+.caixa-cadastro input{
+    width: 383px;
+    height: 56px;
+    background: rgba(231, 238, 240, 0.92);
+    border-radius: 20px;
+    border: none;
+}
+.jatemconta{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+
+}
+.jatemconta1{
+    font-family: 'Imprima', sans-serif;
+    font-style: normal;
+    font-size: 15px;
 }
