@@ -6,6 +6,7 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Condensed', sans-serif;*/
 /**************** HOME ********************************/
+/**************** CABEÇALHO ********************************/
 * {
     margin: 0; /*Distancia da tag que você */
     padding: 0;
@@ -53,10 +54,11 @@ body {
     color: #FFFFFF;
     border: none;
 }
+/**************** CONTEUDO PRINCIPAL ********************************/
 /*MEIO DA PÁGINA*/
-.conteudo-principal{
+.fundo-home{
     height: fit-content;
-    padding: 100px 0;
+    padding: 250px 0;
     background-size: cover;
     background-image: url('../assets/fundo_thebigbang.jpg');
 }
@@ -64,7 +66,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 60px;
+    margin-left: 100px;
+    margin-top: -130px;
     gap: 50px;
 }
 /*TEXTOS*/
@@ -84,10 +87,11 @@ body {
     font-size: 25px;
     line-height: 30px;
     text-align: center;
-    margin-left: 170px;
+    margin-left: 200px;
     color: #000000;
 }
 .quadrado-azul1{
+    margin-top: -30px;
     width: 496px;
     height: 200px;
     background: #B0E5F7;
@@ -127,29 +131,54 @@ body {
     margin-top: 10px;
 }
 .icone_spok{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin-left: 420px;
-    margin-top: -40px;
+    margin-top: -50px;
 }
 .icone_geek{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     margin-left: 20px;
     margin-top: 10px;
 }
 .icone_flash{
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     margin-left: 420px;
-    margin-top: -20px;
+    margin-top: -10px;
 }
+/********************** TRAILER **************************************************************/
+.trailer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content:space-evenly;
+    height: 700px;
+    /*background: rgb(84,140,175);*/
+    background: linear-gradient(138deg, rgba(84,140,175,1) 0%, rgba(161,218,238,1) 71%);
+}
+.trailer-titulo{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 40px;
+    color: #000000;
+}
+/*.logo-e-trailer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content:space-evenly
+}*/
+/**************** FOOTER ********************************/
 .rodape{
     background: #61A7C1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-top: 1px solid #FFFFFF;
+    
 }
 .texto_rodape{
     font-family: 'Inter', sans-serif;;
@@ -157,7 +186,10 @@ body {
     font-weight: 200;
     font-size: 15px;
     color: #000000;
-
+}
+.logo_footer{
+    width: 100px;
+    height: 100px;
 }
 /******************** PERSONAGENS ****************************/
 .conteudo-principal-personagens{
