@@ -7,6 +7,7 @@
     <title>Cadastro</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="assets/logo.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
     <header class="cabecalho-pai">
@@ -33,11 +34,37 @@
         <input id="input_dtNasc">
         <br>
         <p>Username or Email:</p>
-        <input id="input_email-cadastro">
+        <input id="input_email">
         <br>
         <p>Senha:</p>
-        <input id="input_senha-cadastro">
-        <button class="botao-cadastro" onclick="">Sign Up</button>
+        <input id="input_senha">
+        <select class="personagens" id="personagem_bigbang">
+            <option value="1">Sheldon Cooper</option>
+            <option value="2">Leonard Hofstadter</option>
+            <option value="3">Penny</option>
+            <option value="4">Howard Wolowitz</option>
+            <option value="5">Amy Farrah Fowler</option>
+            <option value="6">Rajesh Koothrappali</option>
+            <option value="7">Bernadette Maryann</option>
+            <option value="8">Stuart Bloom</option>
+        </select>
+
+        <select class="temporada" id="temporada_bigbang">
+            <option value="1">1° Temporada</option>
+            <option value="2">2° Temporada</option>
+            <option value="3">3° Temporada</option>
+            <option value="4">4° Temporada</option>
+            <option value="5">5° Temporada</option>
+            <option value="6">6° Temporada</option>
+            <option value="7">7° Temporada</option>
+            <option value="8">8° Temporada</option>
+            <option value="9">9° Temporada</option>
+            <option value="10">10° Temporada</option>
+            <option value="11">11° Temporada</option>
+            <option value="12">12° Temporada</option>
+        </select>
+        
+        <button  onclick="cadastrar()">Sign Up</button>
         <div class="jatemconta"> 
             <p class="jatemconta1">Já tem uma conta?</p>
             <a href="login.html" class="link-login"> Login</a>
@@ -46,3 +73,70 @@
     </main>
 </body>
 </html>
+<script>
+    function cadastrar() {
+       // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = input_nome.value;
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+        var dtNascVar = input_dtNasc.value;
+        var temporadaVar = temporada_bigbang.value;
+        var personagemVar = personagem_bigbang.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || temporadaVar == "" || personagemVar == "") {
+           swal("Ops","Preencha todos os campos","error")
+            finalizarAguardar();
+            return false;
+        }
+       else if(nomeVar.length <=10){
+        swal("Ops","Preencha seu nome corretamente!","warning")
+       }
+       else{
+        setInterval('oi',2000)
+       }
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                temporadaServer: temporadaVar,
+                personagemServer: personagemVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                swal("Parábens","Cadastrado com sucesso!","success");
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                swal ("Ops","Houve um erro ao tentar realizar o cadastro!","warning");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+                finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    /*function sumirMensagem() {
+        cardErro.style.display = "none"
+    }*/
+
+</script>

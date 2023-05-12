@@ -60,6 +60,7 @@ body {
     height: fit-content;
     padding: 250px 0;
     background-size: cover;
+    background-repeat: no-repeat;
     background-image: url('../assets/fundo_thebigbang.jpg');
 }
 .conteudo-principal-sinopse{
@@ -155,8 +156,9 @@ body {
     justify-content: center;
     align-content:space-evenly;
     height: 700px;
-    /*background: rgb(84,140,175);*/
-    background: linear-gradient(138deg, rgba(84,140,175,1) 0%, rgba(161,218,238,1) 71%);
+    /*background: rgb(84,140,175);
+    629ABB*/
+    background: linear-gradient(138deg, rgb(39, 114, 161) 0%, rgba(161,218,238,1) 71%);
 }
 .trailer-titulo{
     font-family: 'Inter', sans-serif;
