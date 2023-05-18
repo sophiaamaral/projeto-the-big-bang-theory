@@ -14,15 +14,15 @@
         <img class="cabecalho-logo" src="assets/logo.png" alt="logo_thebigbangtheory">
         <nav class="cabecalho-links">
             <a href="personagens.html" class="cabecalho-itens">Personagens</a>
-            <a class="cabecalho-itens">Questionário</a>
+            <a href="index.html" class="cabecalho-itens">Home</a>
             <a href="login.html" class="cabecalho-itens">Login</a>
-            <button class="cabecalho-botao">Cadastro</button>
+            <button onclick="botaocadastro()">Cadastro</button>
         </nav>
     </header>
-    <main class="conteudo-principal-cadastro">
-       <div class="caixa-cadastro">
-        <div class="titulo-boasvindas-cadastro">
-            <p>Olá, Seja bem Vindo(a)!</p>
+    <main class="conteudo-principal-usuario">
+       <div class="caixa-usuario">
+        <div class="titulo-boasvindas-usuario">
+            <p class="titulo-bemvindo">Olá, Seja bem Vindo(a)!</p><br>
             <p>Realize o seu cadastro para mais Bazingas!</p>
         </div>
 
@@ -38,7 +38,8 @@
         <br>
         <p>Senha:</p>
         <input id="input_senha">
-        <select class="personagens" id="personagem_bigbang">
+        <p class="opcoes-caixa">Escolha seu personagem Preferido:</p>
+        <select class="opcoes" id="personagem_bigbang">
             <option value="1">Sheldon Cooper</option>
             <option value="2">Leonard Hofstadter</option>
             <option value="3">Penny</option>
@@ -48,8 +49,8 @@
             <option value="7">Bernadette Maryann</option>
             <option value="8">Stuart Bloom</option>
         </select>
-
-        <select class="temporada" id="temporada_bigbang">
+        <p class="opcoes-caixa">Escolha sua temporada Preferida:</p>
+        <select class="opcoes" id="temporada_bigbang">
             <option value="1">1° Temporada</option>
             <option value="2">2° Temporada</option>
             <option value="3">3° Temporada</option>
@@ -67,7 +68,7 @@
         <button  onclick="cadastrar()">Sign Up</button>
         <div class="jatemconta"> 
             <p class="jatemconta1">Já tem uma conta?</p>
-            <a href="login.html" class="link-login"> Login</a>
+            <a href="login.html" class="link-usuario"> Login</a>
        </div>
        </div>
     </main>
@@ -138,5 +139,7 @@
     /*function sumirMensagem() {
         cardErro.style.display = "none"
     }*/
-
+    function botaocadastro(){
+        window.location = "cadastro.html";
+    }
 </script>

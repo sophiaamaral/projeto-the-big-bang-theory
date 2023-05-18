@@ -4,11 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz Bazinga</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-quiz-bazinga.css">
+    <link rel="icon" href="assets/logo.png">
 </head>
 <body>
-    
-</body>
-</html>
-<input type="radio" nome="" value=""> 
-<span></span>  
+    <header class="cabecalho-pai">
+        <img class="cabecalho-logo" src="assets/logo.png" alt="logo_thebigbangtheory">
+        <nav class="cabecalho-links">
+            <a href="" class="resultado-quiz">Resultados</a>
+            <a href="personagens.html" class="personagens-perfil">Personagens</a>
+            <button class="cabecalho-botao" >Quiz Bazinga</button>
+        </nav>
+    </header>  
+    <main class="conteudo-principal-quiz">
+        <section class="fundo-quiz">
+            <h3 class="titulo-quiz">Descubra o quanto você sabe<br>sobre:</h3>
+            <img class="icone_quiz" src="assets/logo-home-trailer.png">
+            <div class="inicia-quiz" onclick="quizbazinga()">Iniciar Quiz</div>
+        </section>
+        <section class="fundo-principal-perguntas">
+            <div class="fundo-perguntas">
+              <div class="question" id="question1">
+                <img class="quiz-imagem" src="assets/quiz-pergunta 1.png" alt="fundo-pergunta1">
+                <p>1 - Quantas temporadas tem The Big Bang Theory?</p>
+                <input type="radio" name="webmaster" value=""><span>15 Temporadas</span><br>
+                <input type="radio" name="webmaster" value=""><span>11 Temporadas</span><br>
+                <input type="radio" name="webmaster" value=""><span>10 Temporadas</span><br> 
+                <input type="radio" name="webmaster" value=""><span>12 Temporadas</span><br> 
+              </div>
+              <div class="question" id="question2">
+                <img class="quiz-imagem" src="assets/quiz-pergunta 1.png" alt="fundo-pergunta1">
+                <p>2 - Qual música Penny costuma cantar a Sheldon quando ele está doente??</p>
+                <input type="radio" name="webmaster" value="gatinho_fofo"><span>Gatinho fofo</span><br>
+                <input type="radio" name="webmaster" value="gatinho_pequeno"><span>Gatinho Pequeno</span><br>
+                <input type="radio" name="webmaster" value="gatinho_macio"><span>Gatinho Macio</span><br> 
+                <input type="radio" name="webmaster" value="gatinho_branquinho"><span>Gatinho Branquinho</span><br> 
+              </div> 
+              <div class="question" id="question3">
+                <img class="quiz-imagem" src="assets/quiz-pergunta 1.png" alt="fundo-pergunta1">
+                <p>3 - Qual é o nome da pequena bola de pelo(cachorrinha) de Raj?</p>
+                <input type="radio" name="webmaster" value="stella"><span>Stella</span><br>
+                <input type="radio" name="webmaster" value="estrela"><span>Estrela</span><br>
+                <input type="radio" name="webmaster" value="canela"><span>Canela</span><br> 
+                <input type="radio" name="webmaster" value="princesa"><span>Princesa</span><br> 
+              </div>
+            </div>
+            <button onclick="previousQuestion()">Anterior</button>
+            <button onclick="nextQuestion()">Próxima</button>
+        </section>
+     </main>
+     <script>
+
+      function quizbazinga(){
+        window.location = "javascript:window.scrollTo({left: 0,top: 1000, behavior: 'smooth'})";
+      }
+      var currentQuestion = 0;
+    var questions = document.getElementsByClassName('question');
+
+    function showQuestion(index) {
+      for (var i = 0; i < questions.length; i++) {
+        questions[i].style.display = 'none';
+      }
+
+      questions[index].style.display = 'block';
+    }
+
+    function previousQuestion() {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+      } else {
+        currentQuestion = questions.length - 1;
+      }
+
+      showQuestion(currentQuestion);
+    }
+
+    function nextQuestion() {
+      if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+      } else {
+        currentQuestion = 0;
+      }
+
+      showQuestion(currentQuestion);
+    }
+
+    showQuestion(currentQuestion);
+     </script>
+     </body>
+     </html>

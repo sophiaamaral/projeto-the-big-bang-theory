@@ -13,9 +13,9 @@
         <img class="cabecalho-logo" src="assets/logo.png" alt="logo_thebigbangtheory">
         <nav class="cabecalho-links">
             <a href="personagens.html" class="cabecalho-itens">Personagens</a>
-            <a class="cabecalho-itens">Questionário</a>
+            <a href="index.html" class="cabecalho-itens">Home</a>
             <a href="login.html" class="cabecalho-itens">Login</a>
-            <button class="cabecalho-botao">Cadastro</button>
+            <button onclick="botaocadastro()">Cadastro</button>
         </nav>
     </header>
 
@@ -52,3 +52,8 @@
     </footer>
 </body>
 </html>
+<script>
+    function botaocadastro(){
+        window.location = "cadastro.html";
+    }
+</script>

@@ -14,24 +14,26 @@
         <img class="cabecalho-logo" src="assets/logo.png" alt="logo_thebigbangtheory">
         <nav class="cabecalho-links">
             <a href="personagens.html" class="cabecalho-itens">Personagens</a>
-            <a class="cabecalho-itens">Questionário</a>
+            <a href="index.html" class="cabecalho-itens">Home</a>
             <a href="login.html" class="cabecalho-itens">Login</a>
-            <button class="cabecalho-botao">Cadastro</button>
+            <button onclick="botaocadastro()">Cadastro</button>
         </nav>
     </header>
     <main class="conteudo-principal-login">
        <div class="caixa-login">
-        <p>Olá, Seja bem Vindo(a)!</p>
-        <p>Faça o seu login agora</p>
-        <br>
-        <p>Username or email:</p>
-        <input id="input_email">
-        <br>
-        <p>Password:</p>
-        <input id="input_senha">
-        <button onclick="entrar()">Login</button>
-        <p>Ainda não tem uma conta?</p>
-        <a href="cadastro.html" class="link-conta">Criar Conta</a>
+            <p class="titulo-bemvindo">Olá, Bem Vindo(a) de volta!</p>
+            <p class="faca-login">Faça o seu login agora</p>
+            <br>
+            <p>Username or email:</p>
+            <input id="input_email">
+            <br>
+            <p>Password:</p>
+            <input id="input_senha">
+            <button onclick="entrar()">Login</button>
+            <div class="jatemconta"> 
+                <p class="jatemconta1">Ainda não tem uma conta?</p>
+                <a href="cadastro.html" class="link-usuario">Criar conta</a>
+            </div>
        </div>
     </main>
 </body>
@@ -105,6 +107,9 @@
 
     function sumirMensagem() {
         cardErro.style.display = "none"
+    }
+    function botaocadastro(){
+        window.location = "cadastro.html";
     }
 
 </script>

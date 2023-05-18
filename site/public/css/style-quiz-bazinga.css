@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Inconsolata:wght@700;900&family=Inter:wght@700&family=Open+Sans:ital,wght@1,300&family=Roboto+Condensed&family=Roboto:wght@100;400&display=swap');
+/*font-family: 'Imprima', sans-serif;
+font-family: 'Inconsolata', monospace;
+font-family: 'Inter', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;*/
+* {
+    margin: 0; /*Distancia da tag que você */
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.fundo-quiz{
+    height: fit-content;
+    padding: 429px 0;
+    background-size: cover;
+    background-image: url('../assets/fundo-quiz-hd-cortado.jpg');
+    background-position: center;
+}
+.titulo-quiz{
+    align-self: flex-start;
+    margin-top: -405px;
+    margin-left: 89px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    color: #C9232A;
+}
+.icone_quiz{
+    width: 209px;
+    height: 92px;
+    margin-left: 279px;
+    margin-top: -46px;
+}
+.inicia-quiz{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 155px;
+    height: 56px;
+    background: #F39428;
+    border-radius: 20px;
+    border: none;
+    margin-left: 1293px;
+    margin-top: -143px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+/**********************PERGUNTAS**************************************/
+.fundo-principal-perguntas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content:space-evenly;
+    height: 1000px;
+    background: #F39428;
+}
+.fundo-perguntas{
+    width: 700px;
+    height: 676px;
+    background: rgba(231, 238, 240, 0.65);
+    border-radius: 47px;
+}
+.quiz-imagem{
+    width: 677px;
+    height: 410px;
+    border-radius: 29px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.perguntas-stilo{
+    font-family: 'Imprima', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    color: #000000;
+    margin-left: 64px;
+    margin-top: 38px;
+}
+/*********************CARROSSEL***********************************************/
+.question {
+    display: none;
+  }
