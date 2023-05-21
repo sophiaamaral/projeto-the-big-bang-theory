@@ -5,54 +5,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Bazinga</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/style-quiz-bazinga.css">
     <link rel="icon" href="assets/logo.png">
 </head>
 <body>
-    <header class="cabecalho-pai">
-        <img class="cabecalho-logo" src="assets/logo.png" alt="logo_thebigbangtheory">
-        <nav class="cabecalho-links">
-            <a href="" class="resultado-quiz">Resultados</a>
+    <!-- <header class="cabecalho-quiz">
+        <img class="cabecalho-logo-quiz" src="assets/logo.png" alt="logo_thebigbangtheory">
+        <nav class="cabecalho-links-quiz">
+            <a href="" class="analytics-quiz">Analytics</a>
             <a href="personagens.html" class="personagens-perfil">Personagens</a>
             <button class="cabecalho-botao" >Quiz Bazinga</button>
         </nav>
-    </header>  
+    </header>   -->
     <main class="conteudo-principal-quiz">
         <section class="fundo-quiz">
             <h3 class="titulo-quiz">Descubra o quanto você sabe<br>sobre:</h3>
-            <img class="icone_quiz" src="assets/logo-home-trailer.png">
+            <!-- <img class="icone_quiz" src="assets/logo-home-trailer.png"> -->
             <div class="inicia-quiz" onclick="quizbazinga()">Iniciar Quiz</div>
         </section>
+
+<!-- ******************************PERGUNTAS**************************************************************** -->
         <section class="fundo-principal-perguntas">
+          <div id="botao-volta" class="botao-volta" onclick="pergunta_anterior()"></div>
             <div class="fundo-perguntas">
               <div class="question" id="question1">
-                <img class="quiz-imagem" src="assets/quiz-pergunta 1.png" alt="fundo-pergunta1">
+                <img class="quiz-imagem" src="assets/The-Big-Bang-Theory-pergunta1.jpg" alt="fundo-pergunta1">
                 <p>1 - Quantas temporadas tem The Big Bang Theory?</p>
-                <input type="radio" name="webmaster" value=""><span>15 Temporadas</span><br>
-                <input type="radio" name="webmaster" value=""><span>11 Temporadas</span><br>
-                <input type="radio" name="webmaster" value=""><span>10 Temporadas</span><br> 
-                <input type="radio" name="webmaster" value=""><span>12 Temporadas</span><br> 
+                <input type="radio" name="webmaster" value="quinze_temp"><span>15 Temporadas</span><br><br>
+                <input type="radio" name="webmaster" value="onze_temp"><span>11 Temporadas</span><br><br>
+                <input type="radio" name="webmaster" value="dez_temp"><span>10 Temporadas</span><br><br>
+                <input type="radio" name="webmaster" value="doze_temp"><span>12 Temporadas</span><br><br>
               </div>
               <div class="question" id="question2">
-                <img class="quiz-imagem" src="assets/quiz-pergunta 1.png" alt="fundo-pergunta1">
-                <p>2 - Qual música Penny costuma cantar a Sheldon quando ele está doente??</p>
-                <input type="radio" name="webmaster" value="gatinho_fofo"><span>Gatinho fofo</span><br>
-                <input type="radio" name="webmaster" value="gatinho_pequeno"><span>Gatinho Pequeno</span><br>
-                <input type="radio" name="webmaster" value="gatinho_macio"><span>Gatinho Macio</span><br> 
-                <input type="radio" name="webmaster" value="gatinho_branquinho"><span>Gatinho Branquinho</span><br> 
+                <img class="quiz-imagem" src="assets/penny-gatinhomacio-quiz.jpg" alt="fundo-pergunta1">
+                <p>2 - Qual música Penny costuma cantar a Sheldon quando ele está doente?</p>
+                <input type="radio" name="webmaster" value="gatinho_fofo"><span>Gatinho fofo</span><br><br>
+                <input type="radio" name="webmaster" value="gatinho_pequeno"><span>Gatinho Pequeno</span><br><br>
+                <input type="radio" name="webmaster" value="gatinho_macio"><span>Gatinho Macio</span><br><br>
+                <input type="radio" name="webmaster" value="gatinho_branquinho"><span>Gatinho Branquinho</span><br><br> 
               </div> 
               <div class="question" id="question3">
-                <img class="quiz-imagem" src="assets/quiz-pergunta 1.png" alt="fundo-pergunta1">
-                <p>3 - Qual é o nome da pequena bola de pelo(cachorrinha) de Raj?</p>
-                <input type="radio" name="webmaster" value="stella"><span>Stella</span><br>
-                <input type="radio" name="webmaster" value="estrela"><span>Estrela</span><br>
-                <input type="radio" name="webmaster" value="canela"><span>Canela</span><br> 
-                <input type="radio" name="webmaster" value="princesa"><span>Princesa</span><br> 
+                <img class="quiz-imagem3" src="assets/raj-canela.png" alt="fundo-pergunta1">
+                <div class="pergunta3">
+                <p class="pergunta3-titulo">3 - Qual é o nome da pequena cachorrinha de Raj?</p>
+                  <input type="radio" name="webmaster" value="stella"><span> Stella</span><br><br>
+                  <input type="radio" name="webmaster" value="estrela"><span> Estrela</span><br><br>
+                  <input type="radio" name="webmaster" value="canela"><span> Canela</span><br><br>
+                  <input type="radio" name="webmaster" value="princesa"><span> Princesa</span><br><br>
+                </div>
               </div>
+              <div class="question" id="question4">
+                <img class="quiz-imagem" src="assets/elevador-quebrado.jpg" alt="fundo-pergunta1">
+                <p>4 - Em qual temporada o elevador do prédio de Sheldon foi concertado?</p>
+                <input type="radio" name="webmaster" value="nenhuma"><span>Nenhuma</span><br><br>
+                <input type="radio" name="webmaster" value="temporada7"><span>7° Temporada</span><br><br>
+                <input type="radio" name="webmaster" value="temporada8"><span>8° Temporada</span><br><br>
+                <input type="radio" name="webmaster" value="ultimatemporada"><span>Última Temporada</span><br><br> 
+              </div> 
+              <div class="question" id="question5">
+                <img class="quiz-imagem" src="assets/sheldon-piscina-de-bolinhas.jpg" alt="fundo-pergunta1">
+                <p>5 - O que Sheldon sempre diz após fazer uma piada?</p>
+                <input type="radio" name="webmaster" value="taran"><span>Tarân</span><br><br>
+                <input type="radio" name="webmaster" value="bazinga"><span>Bazinga!</span><br><br>
+                <input type="radio" name="webmaster" value="ahestafoiboa"><span>Ah esta foi boa!</span><br><br>
+                <input type="radio" name="webmaster" value="Amen"><span>Amén</span><br><br> 
+              </div> 
+              <div class="question" id="question6">
+                <img class="quiz-imagem3" src="assets/penny-emprego.jpg" alt="fundo-pergunta1">
+                <div class="pergunta3">
+                  <p class="pergunta3-titulo">6 - Qual era o emprego da Penny no começo da série</p>
+                  <input type="radio" name="webmaster" value="garconete"><span>Garçonete na fábrica do cheescake</span><br><br>
+                  <input type="radio" name="webmaster" value="representante"><span>Representante de vendas</span><br><br>
+                  <input type="radio" name="webmaster" value="atriz"><span>Atriz</span><br><br>
+                  <input type="radio" name="webmaster" value="desempregada"><span>Desempregada</span><br><br>
+                </div> 
+              </div> 
+              <div class="question" id="question7">
+                <img class="quiz-imagem" src="assets/personagem-sem-namo.webp" alt="fundo-pergunta1">
+                <p>7 - Qual era o único personagem que não tinha namorada?</p>
+                <input type="radio" name="webmaster" value="leonard"><span>Leonard</span><br><br>
+                <input type="radio" name="webmaster" value="sheldon"><span>Sheldon</span><br><br>
+                <input type="radio" name="webmaster" value="rajesh"><span>Rajesh</span><br><br>
+                <input type="radio" name="webmaster" value="howard"><span>Howard</span><br><br> 
+              </div> 
+              <div class="question" id="question8">
+                <img class="quiz-imagem" src="assets/leonard-ao-conhecer-penny.jpg" alt="fundo-pergunta1">
+                <p>8 - O que Leonard disse quando conheceu a Penny?</p>
+                <input type="radio" name="webmaster" value="voumecasar"><span>"Vou me casar com essa mulher"</span><br><br>
+                <input type="radio" name="webmaster" value="lindosinteligentes"><span>"Nossos filhos serão lindos e inteligentes"</span><br><br>
+                <input type="radio" name="webmaster" value="gata"><span>"Cara, como ela é gata!"</span><br><br>
+                <input type="radio" name="webmaster" value="estouapaixonado"><span>"Um upgrade em relação a antiga vizinha"</span><br><br> 
+              </div> 
+              <div class="question" id="question9">
+                <img class="quiz-imagem" src="assets/melhor-numero.webp" alt="fundo-pergunta1">
+                <p>9 - Qual número Sheldon considera perfeito?</p>
+                <input type="radio" name="webmaster" value="umtres"><span>13</span><br><br>
+                <input type="radio" name="webmaster" value="setetres"><span>73</span><br><br>
+                <input type="radio" name="webmaster" value="trestres"><span>33</span><br><br>
+                <input type="radio" name="webmaster" value="doisdois"><span>22</span><br><br> 
+              </div>
+              <div class="question" id="question10">
+                <img class="quiz-imagem" src="assets/sheldon-janela.gif" alt="fundo-pergunta1">
+                <p>10 - Qual animal Sheldon encontra em sua janela?</p>
+                <input type="radio" name="webmaster" value="pomba"><span>Pomba</span><br><br>
+                <input type="radio" name="webmaster" value="gaioazul"><span>Gaio Azul</span><br><br>
+                <input type="radio" name="webmaster" value="picapau"><span>Pica Pau</span><br><br>
+                <input type="radio" name="webmaster" value="beijaflor"><span>Beija-Flor</span><br><br> 
+              </div>  
+              <div class="question" id="question11">
+                <div class="resultado-quiz">
+                  <p>Resultado:</p> 
+                  <button onclick="exiberesultado()">Exibir Resultado</button>
+                  <p id="p_resultado"></p>
+                </div>
+              </div>  
             </div>
-            <button onclick="previousQuestion()">Anterior</button>
-            <button onclick="nextQuestion()">Próxima</button>
+            <div id="botao-avanca" class="botao-proximo" onclick="proxima_pergunta()"></div> 
         </section>
      </main>
      <script>
@@ -60,38 +130,140 @@
       function quizbazinga(){
         window.location = "javascript:window.scrollTo({left: 0,top: 1000, behavior: 'smooth'})";
       }
-      var currentQuestion = 0;
-    var questions = document.getElementsByClassName('question');
 
-    function showQuestion(index) {
-      for (var i = 0; i < questions.length; i++) {
-        questions[i].style.display = 'none';
+/**********************************CARROSSEL**********************************************************/
+var pergunta_atual = 0; //armazena o indice da pergunta atual
+var pergunta = []; // vetor que armazena todas as perguntas
+var perguntas_question = document.getElementsByClassName('question');//puxa os elementos que estão na classe chamada question
+
+for(var i = 0; i < perguntas_question.length; i++){
+  pergunta.push(perguntas_question[i])//puxa as perguntas da div para o vetor pergunta 
+}
+//Determina a pergunta que deve ser exibida dentro do loop for
+function exibepergunta(pergunta_atual) { //Exibe a pergunta correspondente ao indice fornecido enquanto oculta as demais perguntas
+  for (var i = 0; i < pergunta.length; i++){//percorre cada elemento do vetor pergunta
+    if(i == pergunta_atual){
+      pergunta[i].style.display = 'block'; //define o estilo display como none ocultando todas as perguntas que não estão sendo exibidas
+    }else{
+      pergunta[i].style.display = 'none';
+    }
+  }
+}
+
+function pergunta_anterior() {
+  if (pergunta_atual > 0) {
+    pergunta_atual--;
+}else{
+  pergunta_atual = pergunta.length - 1;
+}
+exibepergunta(pergunta_atual);
+}
+function proxima_pergunta() {
+  verificarResposta();
+  if(pergunta_atual < pergunta.length - 1) {
+    pergunta_atual++;
+  }else {
+    pergunta_atual = 0;
+  }
+  exibepergunta(pergunta_atual);
+}
+exibepergunta(pergunta_atual);
+
+/*************************VALIDAÇÕES PERGUNTAS**********************************/
+var pontos = 0;
+function verificarResposta() {
+    // Verifica se alguma opção de rádio está marcada
+    var opcoes = document.getElementsByName("webmaster");
+    var opcaoSelecionada = false;
+
+    for (var i = 0; i < opcoes.length; i++) {
+      if (opcoes[i].checked) {
+        opcaoSelecionada = true;
+        break;
       }
-
-      questions[index].style.display = 'block';
     }
 
-    function previousQuestion() {
-      if (currentQuestion > 0) {
-        currentQuestion--;
-      } else {
-        currentQuestion = questions.length - 1;
-      }
-
-      showQuestion(currentQuestion);
+    // Se nenhuma opção estiver marcada, exibe um alerta e impede a ação
+    if (!opcaoSelecionada) {
+      document.getElementById("botao-avanca").disabled = !opcaoSelecionada;
+      //document.getElementById("btnVoltar").disabled = !opcaoSelecionada;
+      swal ("Ops","Marque uma opção!","warning");
+      return false;
     }
 
-    function nextQuestion() {
-      if (currentQuestion < questions.length - 1) {
-        currentQuestion++;
-      } else {
-        currentQuestion = 0;
-      }
-
-      showQuestion(currentQuestion);
+    // Verifica se a resposta está correta
+    var respostacorreta1 = "doze_temp";
+    var respostacorreta2 = "gatinho_macio";
+    var respostacorreta3 = "canela";
+    var respostacorreta4 = "ultimatemporada";
+    var respostacorreta5 = "bazinga";
+    var respostacorreta6 = "garconete";
+    var respostacorreta7 = "rajesh";
+    var respostacorreta8 = "lindosinteligentes";
+    var respostacorreta9 = "setetres";
+    var respostacorreta10 = "gaioazul";
+    var respostaSelecionada = document.querySelector('input[name="webmaster"]:checked').value;
+    // Se a resposta estiver correta, exibe uma mensagem de parabéns
+    if ((respostaSelecionada === respostacorreta1)) {
+      swal("Parábens","Resposta correta!","success");      
+      pontos += 1;
+    }else if(respostaSelecionada === respostacorreta2){
+      swal("Parábens","Resposta correta!","success");      
+      pontos += 1;
+    }else if(respostaSelecionada === respostacorreta3){
+      swal("Parábens","Resposta correta!","success");      
+      pontos += 1;
+    }else if(respostaSelecionada ===  respostacorreta4){
+      swal("Parábens","Resposta correta!","success");      
+      pontos += 1;
+    }else if(respostaSelecionada === respostacorreta5){
+      swal("Parábens","Resposta correta!","success");      
+      pontos += 1;
+    }else if (respostaSelecionada === respostacorreta6){
+      swal("Parábens","Resposta correta!","success");      
+      pontos += 1;
+    }else if (respostaSelecionada === respostacorreta7){
+      swal("Parábens","Resposta correta!","success");      
+      pontos += 1;
+    }else if (respostaSelecionada === respostacorreta8){
+      swal("Parábens","Resposta correta!","success");      
+      pontos += 1;
+    }else if(respostaSelecionada === respostacorreta9){
+      swal("Parábens","Resposta correta!","success");      
+      pontos += 1;
+    }else if(respostaSelecionada === respostacorreta10){
+      swal("Parábens","Resposta correta!","success");
+      pontos += 1;
+    }
+    else {
+      swal ("Ops","Resposta incorreta!","warning");
     }
 
-    showQuestion(currentQuestion);
+    // Permite a ação padrão (navegar para a próxima pergunta)
+    return true;
+
+  }
+  console.log(pontos)
+  /**************************************RESULTADO**************************************************/
+  function exiberesultado(){
+    if(pontos >=0 && pontos <=3){
+      p_resultado.innerHTML = `Hmm...Precisa assistir mais a série<br>
+      Você acertou: ${pontos} questões`;
+    }else if(pontos >3 && pontos <= 5){
+      p_resultado.innerHTML = `Hmm... Vá reprisar a série<br>
+      Você acertou: ${pontos} questões`;
+    }else if(pontos >5 && pontos <= 7){
+      p_resultado.innerHTML = `Quase, Um fã com memória curta<br>
+      Você acertou: ${pontos} questões`;
+    }else if(pontos >7 && pontos <= 8){
+      p_resultado.innerHTML = `Quase, Você é fã mas falta assistir mais<br>
+      Você acertou: ${pontos} questões`;
+    }else if(pontos == 10){
+      p_resultado.innerHTML = `Parabéns! Você é um verdadeiro fã de The Big Bang Theory<br>
+      Você acertou: ${pontos} questões`;
+    }
+   
+  }
      </script>
      </body>
      </html>
