@@ -17,11 +17,55 @@ font-family: 'Roboto Condensed', sans-serif;*/
     width: 200px;
     left: 0px;
     top: 0px; 
-    background: #23308B;
-    /* display: flex;
+    background-color: #23308B;
+    display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    border-right: 3px solid #ffffff; */
+    align-content: center;
+}
+.cabecalho-logo-quiz{
+    width: 130px;
+    height: 108px;
+    margin-top: -9px;
+    margin-left: 11px;
+}
+.botao-analytics{
+    width: 180px;
+    height: 59px;
+    background: rgba(231, 238, 240, 0.92);
+    border-radius: 20px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.botao-personagem{
+   width: 180px;
+    height: 59px;
+    background: rgba(231, 238, 240, 0.92);
+    border-radius: 20px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.botao-exit{
+    width: 180px;
+    height: 59px;
+    background: rgba(231, 238, 240, 0.92);
+    border-radius: 20px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    
 }
 .fundo-quiz{
     margin-left: 200px;
@@ -39,9 +83,9 @@ font-family: 'Roboto Condensed', sans-serif;*/
 
 }
 .titulo-quiz{ 
-    align-self: flex-start;
-    margin-top: -44px;
-    margin-left: 96px;
+    /* align-self: flex-start; */
+    margin-top: -42px;
+    margin-left: 42px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 800;
@@ -57,10 +101,10 @@ font-family: 'Roboto Condensed', sans-serif;*/
     width: 155px;
     height: 56px;
     background:#450093;
-    border-radius: 20px;
+    border-radius: 16px;
     border: none;
-    margin-left: 1007px;
-    margin-top: -135px;
+    margin-left: 1092px;
+    margin-top: -115px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-size: 20px;
@@ -74,7 +118,7 @@ font-family: 'Roboto Condensed', sans-serif;*/
     justify-content: center;
     align-content:space-around;
     height: 850px;
-    background: radial-gradient(circle, rgba(107,20,147,1) 0%, rgba(104,9,120,1) 90%);
+    background-color: #23308B;
     gap: 30px;
 }
 .fundo-perguntas{

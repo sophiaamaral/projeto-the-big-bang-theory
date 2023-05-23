@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Inconsolata:wght@700;900&family=Inter:wght@700&family=Open+Sans:ital,wght@1,300&family=Roboto+Condensed&family=Roboto:wght@100;400&display=swap');
+/*font-family: 'Imprima', sans-serif;
+font-family: 'Inconsolata', monospace;
+font-family: 'Inter', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;*/
+/******************** PERSONAGENS ****************************/
+body{
+    background-color:#23308B;
+}
+.titulo-principal-personagens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.fundo-titulo{
+    width: 976px;
+    height: 104px;
+    background: #767EB0;
+    border-radius: 10px;
+}
+.titulo-personagens{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+    color: #FFFFFF;
+
+}

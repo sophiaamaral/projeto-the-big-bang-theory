@@ -155,7 +155,7 @@ body {
     align-items: center;
     justify-content: center;
     align-content:space-evenly;
-    height: 700px;
+    height: 585px;
     /*background: rgb(84,140,175);
     629ABB*/
     background: linear-gradient(138deg, rgb(39, 114, 161) 0%, rgba(161,218,238,1) 71%);
@@ -193,51 +193,7 @@ body {
     width: 100px;
     height: 100px;
 }
-/******************** PERSONAGENS ****************************/
-.conteudo-principal-personagens{
-    background: #60A8C1;
-}
-.conteudo-principal-personagens-principais{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-}
-.titulo-personagens{
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    align-items: center;
-    margin-top: 60px;
-    /*margin-left: 300px;*/
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-size: 30px;
-    text-align: center;
-    color: #FFFFFF;
-    width: 800px;
-    height: 100px;
-    background: #971217;
-    border-radius: 3px;
-    color: #FFFFFF;
-}
-.quadrado-sheldon{
-    width: 1247px;
-    height: 644px;
-    background: #B8D9CD;
-    border-radius: 25px;
-}
-.quadrado-leonard{
-    width: 1247px;
-    height: 490px;
-    background: #F9D58F;
-    border-radius: 25px;
-}
-.quadrado-penny{
-    width: 1247px;
-    height: 490px;
-}
+
 /******************** LOGIN ****************************/
 .conteudo-principal-login{
     height: fit-content;

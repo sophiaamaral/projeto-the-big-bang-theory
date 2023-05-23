@@ -15,11 +15,9 @@
     <main class="conteudo-principal-quiz">
       <div class="cabecalho-quiz">
         <img class="cabecalho-logo-quiz" src="assets/logo.png" alt="logo_thebigbangtheory">
-        <nav class="cabecalho-links-quiz">
-          <a href="" class="analytics-quiz">Analytics</a>
-          <a href="personagens.html" class="personagens-perfil">Personagens</a>
-          <button class="cabecalho-botao" >Quiz Bazinga</button>
-        </nav>
+        <button class="botao-analytics">Analytics</button>
+        <button class="botao-personagem">Personagens</button>
+        <button class="botao-exit">Sair</button>
       </div>
       <section class="fundo-quiz">
             <h3 class="titulo-quiz">Descubra o quanto você sabe<br>sobre:</h3>
@@ -128,7 +126,7 @@
      <script>
 
       function quizbazinga(){
-        window.location = "javascript:window.scrollTo({left: 0,top: 1000, behavior: 'smooth'})";
+        window.location = "javascript:window.scrollTo({left: 0,top: 800, behavior: 'smooth'})";
       }
 
 /**********************************CARROSSEL**********************************************************/
@@ -204,34 +202,34 @@ function verificarResposta() {
     var respostacorreta10 = "gaioazul";
     var respostaSelecionada = document.querySelector('input[name="webmaster"]:checked').value;
     // Se a resposta estiver correta, exibe uma mensagem de parabéns
-    if ((respostaSelecionada === respostacorreta1)) {
+    if ((respostaSelecionada == respostacorreta1)) {
       swal("Parábens","Resposta correta!","success");      
       pontos += 1;
-    }else if(respostaSelecionada === respostacorreta2){
+    }else if(respostaSelecionada == respostacorreta2){
       swal("Parábens","Resposta correta!","success");      
       pontos += 1;
-    }else if(respostaSelecionada === respostacorreta3){
+    }else if(respostaSelecionada == respostacorreta3){
       swal("Parábens","Resposta correta!","success");      
       pontos += 1;
-    }else if(respostaSelecionada ===  respostacorreta4){
+    }else if(respostaSelecionada == respostacorreta4){
       swal("Parábens","Resposta correta!","success");      
       pontos += 1;
-    }else if(respostaSelecionada === respostacorreta5){
+    }else if(respostaSelecionada == respostacorreta5){
       swal("Parábens","Resposta correta!","success");      
       pontos += 1;
-    }else if (respostaSelecionada === respostacorreta6){
+    }else if (respostaSelecionada == respostacorreta6){
       swal("Parábens","Resposta correta!","success");      
       pontos += 1;
-    }else if (respostaSelecionada === respostacorreta7){
+    }else if (respostaSelecionada == respostacorreta7){
       swal("Parábens","Resposta correta!","success");      
       pontos += 1;
-    }else if (respostaSelecionada === respostacorreta8){
+    }else if (respostaSelecionada == respostacorreta8){
       swal("Parábens","Resposta correta!","success");      
       pontos += 1;
-    }else if(respostaSelecionada === respostacorreta9){
+    }else if(respostaSelecionada == respostacorreta9){
       swal("Parábens","Resposta correta!","success");      
       pontos += 1;
-    }else if(respostaSelecionada === respostacorreta10){
+    }else if(respostaSelecionada == respostacorreta10){
       swal("Parábens","Resposta correta!","success");
       pontos += 1;
     }
