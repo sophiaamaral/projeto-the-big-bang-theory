@@ -1,14 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Imprima&family=Inconsolata:wght@700;900&family=Inter:wght@700&family=Open+Sans:ital,wght@1,300&family=Roboto&family=Roboto+Condensed&display=swap');
+/*font-family: 'Imprima', sans-serif;
+font-family: 'Inconsolata', monospace;
+font-family: 'Inter', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;*/
 /* pagina mural */
 
-*,
-body {
-  font-family: "Exo 2", sans-serif;
-} 
-
+*
 .label-captura {
   display: flex;
   justify-content: center;
 }
+
 .dash {
   width: 70%;
   position: relative;
@@ -17,15 +21,17 @@ body {
   background-color: #161618;
   height: 90vh;
   overflow: auto;
+  margin-top: -694px;
+  margin-left: 10px;
 }
 
-.regua {
+/* .regua {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   margin-top: 30px;
-}
+} */
 
 .btns-dash {
   display: flex;
@@ -33,43 +39,30 @@ body {
   justify-content: center;
   margin-top: 30px;
 }
-
+.botao-dash-temporada{
+  width: 153px;
+  height: 32px;
+  background: rgba(80, 4, 157, 0.92);
+  border-radius: 5px;
+  border: none;
+  font-family: 'Inconsolata', monospace;
+  font-size: 15px;
+  color: #fff;
+}
 .graph {
   width: 80%;
   margin: auto;
   padding-top: 10px;
-} 
+}
 
 .tituloGraficos {
   color: rgb(216, 216, 216);
   display: flex;
   justify-content: center;
+  font-family: 'Inconsolata', monospace;
 }
 
-.btn-chart {
-  font-family: "Exo 2", sans-serif;
-  border: 0;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  color: #e6005a;
-  background-color: white;
-  margin: 5px;
-  border-radius: 3px;
-}
-
-.btn-pink {
-  color: white;
-  background-color: #e6005a;
-}
-
-.btn-white {
-  color: #e6005a;
-  background-color: white;
-
-}
-
- .label-captura {
+.label-captura {
   height: 80px;
 }
 
@@ -83,72 +76,63 @@ body {
 
 .display-block {
   display: block;
-}  
+}
 
 canvas {
   width: 100% !important;
   height: 100% !important;
 }
-.hello{
-  font-family: 'Imprima', sans-serif;
+
+.hello {
+  font-family: 'Inconsolata', monospace;
   font-style: normal;
   font-weight: 400;
   font-size: 23px;
   color: #000000;
 }
-.cabecalho-quiz{
+
+/******************************** CABEÇALHO *********************************************************/
+* {
+  margin: 0;
+  /*Distancia da tag que você */
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.cabecalho-quiz {
   top: 0;
-  height: 100vh;
-  width: 200px;
+  height: 100vh; 
+  width: 231px;
   left: 0px;
-  top: 0px; 
+  top: 0px;
   background-color: #23308B;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
+  border-right: floralwhite 1px solid;
 }
-.cabecalho-logo-quiz{
+
+.cabecalho-logo-quiz {
   width: 130px;
   height: 108px;
   margin-top: -9px;
-  margin-left: 11px;
+  margin-left: -3px;
 }
-.botao-analytics{
+
+.botao-cabecalho {
   width: 180px;
   height: 59px;
   background: rgba(231, 238, 240, 0.92);
   border-radius: 20px;
   border: none;
   font-family: 'Inter', sans-serif;
-  font-weight: 800;
   font-size: 20px;
-  line-height: 24px;
   color: #000000;
 }
-.botao-personagem{
- width: 180px;
-  height: 59px;
-  background: rgba(231, 238, 240, 0.92);
-  border-radius: 20px;
-  border: none;
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 24px;
-  color: #000000;
-}
-.botao-exit{
-  width: 180px;
-  height: 59px;
-  background: rgba(231, 238, 240, 0.92);
-  border-radius: 20px;
-  border: none;
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 24px;
-  color: #000000;
-  
+.fundo-dash{
+  background-color: #23308B;
+  height: 739px;
 }

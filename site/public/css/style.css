@@ -57,9 +57,8 @@ body {
 /**************** CONTEUDO PRINCIPAL ********************************/
 /*MEIO DA PÁGINA*/
 .fundo-home{
-    height: fit-content;
     padding: 250px 0;
-    height: 100vh;
+    height: 125vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url('../assets/fundo_thebigbang.jpg');
