@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/style-quiz-bazinga.css">
+    <script src="js/funcoes.js"></script>
     <link rel="icon" href="assets/logo.png">
 </head>
 <body>
@@ -15,9 +16,14 @@
     <main class="conteudo-principal-quiz">
       <div class="cabecalho-quiz">
         <img class="cabecalho-logo-quiz" src="assets/logo.png" alt="logo_thebigbangtheory">
-        <button class="botao-analytics">Analytics</button>
+        <div class="hello">
+          <h3>Olá, <span id="b_usuario"></span></h3>
+        </div>
+        <a href="dashboard/dash-personagem.html">
+          <button class="botao-analytics">Analytics</button>
+        </a>
         <button class="botao-personagem">Personagens</button>
-        <button class="botao-exit">Sair</button>
+        <button class="botao-exit" onclick="limparSessao()">Sair</button>
       </div>
       <section class="fundo-quiz">
             <h3 class="titulo-quiz">Descubra o quanto você sabe<br>sobre:</h3>
@@ -124,7 +130,7 @@
         </section>
      </main>
      <script>
-
+      b_usuario.innerHTML = sessionStorage.NOME_USUARIO
       function quizbazinga(){
         window.location = "javascript:window.scrollTo({left: 0,top: 800, behavior: 'smooth'})";
       }

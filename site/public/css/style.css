@@ -59,6 +59,7 @@ body {
 .fundo-home{
     height: fit-content;
     padding: 250px 0;
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url('../assets/fundo_thebigbang.jpg');

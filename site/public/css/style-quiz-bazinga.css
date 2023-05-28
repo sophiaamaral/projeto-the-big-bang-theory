@@ -1,15 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Inconsolata:wght@700;900&family=Inter:wght@700&family=Open+Sans:ital,wght@1,300&family=Roboto+Condensed&family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Imprima&family=Inconsolata:wght@700;900&family=Inter:wght@700&family=Open+Sans:ital,wght@1,300&family=Roboto&family=Roboto+Condensed&display=swap');
 /*font-family: 'Imprima', sans-serif;
 font-family: 'Inconsolata', monospace;
 font-family: 'Inter', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Roboto', sans-serif;
-font-family: 'Roboto Condensed', sans-serif;*/
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Anton', sans-serif;*/
 * {
     margin: 0; /*Distancia da tag que você */
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+}
+.hello{
+    font-family: 'Imprima', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    color: #000000;
 }
 .cabecalho-quiz{
     top: 0;
@@ -84,6 +92,7 @@ font-family: 'Roboto Condensed', sans-serif;*/
 }
 .titulo-quiz{ 
     /* align-self: flex-start; */
+    /* font-family: 'Anton', sans-serif; */
     margin-top: -42px;
     margin-left: 42px;
     font-family: 'Inter', sans-serif;
