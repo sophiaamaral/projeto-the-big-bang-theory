@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Imprima&family=Inconsolata:wght@700;900&family=Inter:wght@700&family=Open+Sans:ital,wght@1,300&family=Roboto+Condensed&family=Roboto:wght@100;400&display=swap');
+
 /*font-family: 'Imprima', sans-serif;
 font-family: 'Inconsolata', monospace;
 font-family: 'Inter', sans-serif;
@@ -6,10 +7,11 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Condensed', sans-serif;*/
 /******************** PERSONAGENS ****************************/
-body{
-    background-color:#23308B;
+body {
+    background-color: #23308B;
 }
-.titulo-principal-personagens{
+
+.titulo-principal-personagens {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,13 +19,15 @@ body{
     margin-top: 10px;
     margin-left: 10px;
 }
-.fundo-titulo{
+
+.fundo-titulo {
     width: 976px;
     height: 104px;
     background: #767EB0;
     border-radius: 10px;
 }
-.titulo-personagens{
+
+.titulo-personagens {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -31,5 +35,68 @@ body{
     line-height: 61px;
     text-align: center;
     color: #FFFFFF;
+}
 
+/************************ PERSONAGENS *******************************/
+.personagens {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+}
+
+/************************** SHELDON **********************************/
+
+.foto-sheldon {
+    align-items: center;
+    width: 303px;
+    height: 282px;
+}
+
+.personagem-sheldon {
+    width: 400px;
+    height: 400px;
+    background: #B8D9CD;
+    border-radius: 25px;
+    transition: transform 0.3s; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; 
+}
+
+.personagem-sheldon:hover {
+    transform: scale(1.2);
+    height: 800px;
+}
+
+.text-sheldon {
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+    text-align: center; 
+}
+
+.personagem-sheldon:hover .text-sheldon {
+    opacity: 1;
+}
+
+/**************************** LEONARD ******************************************/
+.personagem-leonard {
+    width: 447px;
+    height: 809px;
+    background: #F9D58F;
+    border-radius: 25px;
+}
+
+/**************************** PENNY ******************************************/
+.personagem-penny {
+    width: 447px;
+    height: 809px;
+    background: #EE97C6;
+    border-radius: 25px;
 }
