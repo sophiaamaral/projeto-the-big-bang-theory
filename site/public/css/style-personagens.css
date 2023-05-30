@@ -6,97 +6,259 @@ font-family: 'Inter', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Roboto Condensed', sans-serif;*/
-/******************** PERSONAGENS ****************************/
-body {
-    background-color: #23308B;
+/******************** CABEÇALHO ****************************/
+* {
+    margin: 0;
+    /*Distancia da tag que você */
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
-.titulo-principal-personagens {
+body{
+    /*background: linear-gradient(to right, #2a0845, #6441A5); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+*/
+    background: linear-gradient(to right, #323fa3, #020a4a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.logo-personagens{
+    width: 342px;
+    height: 143px;
+}
+.cabecalho-personagens {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    align-content: center;
-    margin-top: 10px;
-    margin-left: 10px;
+    /*padding: 24px; margem*/
+    /* background-color: #C9232A; */
+    box-sizing: border-box;
+    border-bottom: 1px solid #FFFFFF;
+    height: 230px;
 }
 
-.fundo-titulo {
-    width: 976px;
-    height: 104px;
-    background: #767EB0;
-    border-radius: 10px;
-}
-
-.titulo-personagens {
-    font-family: 'Inter', sans-serif;
+.titulo-cabecalho {
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 600;
-    font-size: 50px;
-    line-height: 61px;
-    text-align: center;
+    font-size: 55px;
     color: #FFFFFF;
+    margin-left: -121px;
+}
+
+.cabecalho-voltar {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-left: -217px;
+    margin-top: 80px;
+
 }
 
 /************************ PERSONAGENS *******************************/
-.personagens {
+.personagens-principais {
     display: flex;
     flex-direction: row;
-    align-content: space-around;
+    /* align-content: space-between; */
     justify-content: center;
     text-align: center;
-    gap: 30px;
+    gap: 94px;
+    margin-top: 119px;
 }
 
 /************************** SHELDON **********************************/
-
-.foto-sheldon {
-    align-items: center;
-    width: 303px;
-    height: 282px;
-}
-
 .personagem-sheldon {
-    width: 400px;
-    height: 400px;
-    background: #B8D9CD;
+    width: 350px;
+    height: 354px;
+    background: #008880;
     border-radius: 25px;
-    transition: transform 0.3s; 
+    transition: width 0.5s, height 0.5s;
+    /*deixa a mudança de altura suave*/
+    position: relative;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0; 
 }
 
 .personagem-sheldon:hover {
-    transform: scale(1.2);
-    height: 800px;
+    transform: scale(1.1);
+    height: 650px;
 }
 
-.text-sheldon {
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 1;
-    text-align: center; 
-}
 
-.personagem-sheldon:hover .text-sheldon {
+.personagem-sheldon:hover .text {
     opacity: 1;
 }
 
 /**************************** LEONARD ******************************************/
+
 .personagem-leonard {
-    width: 447px;
-    height: 809px;
-    background: #F9D58F;
+    width: 350px;
+    height: 354px;
+    /* background: rgba(239, 243, 40, 0.6); */
+    background: rgba(236, 239, 87, 0.76);
     border-radius: 25px;
+    transition: width 0.5s, height 0.5s;
+    /*deixa a mudança de altura suave*/
+    position: relative;
+    overflow: hidden;
+}
+
+.personagem-leonard:hover {
+    transform: scale(1.1);
+    height: 650px;
+}
+
+.personagem-leonard:hover .text {
+    opacity: 1;
 }
 
 /**************************** PENNY ******************************************/
 .personagem-penny {
-    width: 447px;
-    height: 809px;
-    background: #EE97C6;
+    width: 350px;
+    height: 354px;
+    background: rgba(68, 189, 240, 0.65);
     border-radius: 25px;
+    transition: width 0.5s, height 0.5s;
+    /*deixa a mudança de altura suave*/
+    position: relative;
+    overflow: hidden;
+}
+
+.personagem-penny:hover {
+    transform: scale(1.1);
+    height: 600px;
+}
+
+.personagem-penny:hover .text {
+    opacity: 1;
+}
+
+/***************************** GERAL (TODOS OS PERSONAGENS) ******************************************/
+.foto {
+    align-items: center;
+    width: 303px;
+    height: 282px;
+    margin-top: 20px;
+}
+
+.text {
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+    font-family: 'Imprima', sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+.titulo {
+    font-family: 'Imprima', sans-serif;
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+/**************************** RAJESH ******************************************/
+.personagem-raj {
+    width: 350px;
+    height: 354px;
+    background: rgba(201, 35, 42, 0.8);
+    border-radius: 25px;
+    transition: width 0.5s, height 0.5s;
+    /*deixa a mudança de altura suave*/
+    position: relative;
+    overflow: hidden;
+}
+
+.personagem-raj:hover {
+    transform: scale(1.1);
+    height: 600px;
+}
+
+
+.personagem-raj:hover .text {
+    opacity: 1;
+}
+
+/****************************   BERNADETTE ******************************************/
+.personagem-bern {
+    width: 350px;
+    height: 354px;
+    background: rgba(204, 71, 216, 0.44);
+    border-radius: 25px;
+    transition: width 0.5s, height 0.5s;
+    /*deixa a mudança de altura suave*/
+    position: relative;
+    overflow: hidden;
+}
+
+.personagem-bern:hover {
+    transform: scale(1.1);
+    height: 650px;
+}
+
+
+.personagem-bern:hover .text {
+    opacity: 1;
+}
+
+/**************************** HOWARD ******************************************/
+.personagem-howard {
+    width: 350px;
+    height: 354px;
+    background: rgba(35, 48, 139, 0.78);
+    border-radius: 25px;
+    transition: width 0.5s, height 0.5s;
+    /*deixa a mudança de altura suave*/
+    position: relative;
+    overflow: hidden;
+}
+
+.personagem-howard:hover {
+    transform: scale(1.1);
+    height: 750px;
+}
+
+
+.personagem-howard:hover .text {
+    opacity: 1;
+}
+/**************************** STUART BLOOM ******************************************/
+.personagem-stuart{
+    width: 350px;
+    height: 354px;
+    background: #B48D01;
+    border-radius: 25px;
+    transition: width 0.5s, height 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+.personagem-stuart:hover {
+    transform: scale(1.1);
+    height: 640px;
+}
+
+.personagem-stuart:hover .text {
+    opacity: 1;
+}
+
+/**************************** AMY ******************************************/
+.personagem-amy{
+    width: 350px;
+    height: 354px;
+    background: rgba(255, 0, 184, 0.44);
+    border-radius: 25px;
+    transition: width 0.5s, height 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+.personagem-amy:hover {
+    transform: scale(1.1);
+    height: 550px;
+}
+
+.personagem-amy:hover .text {
+    opacity: 1;
+}
+.rodape-personagens{
+    height: 892px;
+    margin-top: 84px;
+    width: 1518px;
 }
