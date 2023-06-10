@@ -297,6 +297,9 @@ body {
     line-height: 28px;
     color: #FFFFFF;
 }
+.caixa-usuario input{
+    text-align: center;
+}
 .link-usuario{
     margin-left: 5px;
     font-family: 'Inter';
@@ -331,7 +334,12 @@ body {
     border: none;
     margin-top: 30px;
 }
-
+.opcoes option{
+    text-align: center;
+    background: rgba(231, 238, 240, 0.92);
+    font-family: 'Imprima', sans-serif;
+    font-style: normal;
+}
 .titulo-bemvindo{
     font-family: 'Imprima', sans-serif;
     font-style: normal;

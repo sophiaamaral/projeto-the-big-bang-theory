@@ -22,61 +22,44 @@
     <script src="../js/funcoes.js"></script>
     <script src="https://kit.fontawesome.com/9f7414eb10.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
 
-    <div class="janela">
-        <div class="header-left">
-            <h1>AquaTech</h1>
-
+<body>
+    <main class="fundo-dash">
+        <div class="cabecalho-quiz">
+            <img class="cabecalho-logo-quiz" src="assets/logo.png" alt="logo_thebigbangtheory">
             <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                <h3>Olá, <span id="b_usuario"></span></h3>
             </div>
-
-            <div class="btn-nav-white">
-                <a href="./cards.html">
-                    <h3>Aquários</h3>
-                </a>
-            </div>
-
-            <div class="btn-nav">
-
-                <h3>Gráficos</h3>
-
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
-                </a>
-            </div>
-
-            <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-            </div>
-
+            <a href="dashboard/dash-personagem.html">
+                <button class="botao-cabecalho">Analytics</button>
+            </a>
+            <button class="botao-cabecalho" onclick="personagens()">Personagens</button>
+            <button class="botao-cabecalho" onclick="limparSessao()">Sair</button>
         </div>
-
-        <div class="dash">
-            <div class="btns-dash">
-                <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <!-- <button class="btn-chart btn-pink" onclick="exibirAquario(1)" id="btnAquario1">Aquario 1</button> -->
-            </div>
-            <div id="graficos">
-                <div id="grafico1" class="display-block">
-                    <h3 class="tituloGraficos">
-                        <span id="tituloAquario1">Temporada favorita dos usuários</span>
-                    </h3>
-                    <div class="graph">
-                        <canvas id="myChartCanvas2"></canvas>
-                    </div>
-                    <div class="label-captura">
-                        <p id="avisoCaptura1" style="color: white"></p>
+        <div class="janela">
+            <div class="dash">
+                <div class="btns-dash">
+                    <a href="dash-personagem.html">
+                        <button class="botao-dash-temporada">Personagens</button>
+                    </a>
+                </div>
+                <div id="graficos">
+                    <div id="grafico1" class="display-block">
+                        <h3 class="tituloGraficos">
+                            <span id="tituloAquario1">Temporada favorita dos usuários</span>
+                        </h3>
+                        <div class="graph">
+                            <canvas id="myChartCanvas2"></canvas>
+                        </div>
+                        <div class="label-captura">
+                            <p id="avisoCaptura1" style="color: white"></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
+    </main>
 </body>
 
 </html>
@@ -219,5 +202,5 @@
     }
 
 
-    
+
 </script>

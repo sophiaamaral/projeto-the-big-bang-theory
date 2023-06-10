@@ -19,7 +19,7 @@
         <div class="hello">
           <h3>Olá, <span id="b_usuario"></span></h3>
         </div>
-        <a href="dashboard/dash-personagem.html">
+        <a href="dash-personagem.html">
           <button class="botao-cabecalho">Analytics</button>
         </a>
         <a href="personagens.html">
@@ -173,29 +173,26 @@ function proxima_pergunta() {
   }
   exibepergunta(pergunta_atual);
 }
-exibepergunta(pergunta_atual);
+ exibepergunta(pergunta_atual);
 
 /*************************VALIDAÇÕES PERGUNTAS**********************************/
-var pontos = 0;
 function verificarResposta() {
-    // Verifica se alguma opção de rádio está marcada
+  // Verifica se alguma opção de rádio está marcada
     var opcoes = document.getElementsByName("webmaster");
     var opcaoSelecionada = false;
 
     for (var i = 0; i < opcoes.length; i++) {
       if (opcoes[i].checked) {
-        opcaoSelecionada = true;
-        break;
-      }
+      opcaoSelecionada = true;
+      // break;
     }
-
-    // Se nenhuma opção estiver marcada, exibe um alerta e impede a ação
+    }
     if (!opcaoSelecionada) {
-      document.getElementById("botao-avanca").disabled = !opcaoSelecionada;
-      //document.getElementById("btnVoltar").disabled = !opcaoSelecionada;
-      swal ("Ops","Marque uma opção!","warning");
-      return false;
-    }
+    // document.getElementById("botao-avanca").disabled = !opcaoSelecionada;
+    //document.getElementById("botao-volta").disabled = !opcaoSelecionada;
+    swal ("Ops","Marque uma opção!","warning");
+    //   return false;
+  }
 
     // Verifica se a resposta está correta
     var respostacorreta1 = "doze_temp";
@@ -210,6 +207,7 @@ function verificarResposta() {
     var respostacorreta10 = "gaioazul";
     var respostaSelecionada = document.querySelector('input[name="webmaster"]:checked').value;
     // Se a resposta estiver correta, exibe uma mensagem de parabéns
+    // diminuir essa lógica com for 
     if ((respostaSelecionada == respostacorreta1)) {
       swal("Parábens","Resposta correta!","success");      
       pontos += 1;
@@ -240,17 +238,18 @@ function verificarResposta() {
     }else if(respostaSelecionada == respostacorreta10){
       swal("Parábens","Resposta correta!","success");
       pontos += 1;
-    }
+    }// Se nenhuma opção estiver marcada, exibe um alerta e impede a ação
     else {
       swal ("Ops","Resposta incorreta!","warning");
     }
-
+    
     // Permite a ação padrão (navegar para a próxima pergunta)
-    return true;
+    // return true;
 
   }
   console.log(pontos)
   /**************************************RESULTADO**************************************************/
+  var pontos = 0;
   function exiberesultado(){
     if(pontos >=0 && pontos <=3){
       p_resultado.innerHTML = `Hmm...Precisa assistir mais a série<br>

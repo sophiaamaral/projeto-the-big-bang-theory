@@ -15,14 +15,17 @@ font-family: 'Roboto Condensed', sans-serif;*/
     box-sizing: border-box;
 }
 
-body{
+body {
     /*background: linear-gradient(to right, #2a0845, #6441A5); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+*/
-    background: linear-gradient(to right, #323fa3, #020a4a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #323fa3, #020a4a);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.logo-personagens{
+
+.logo-personagens {
     width: 342px;
     height: 143px;
 }
+
 .cabecalho-personagens {
     display: flex;
     flex-direction: row;
@@ -91,7 +94,6 @@ body{
 .personagem-leonard {
     width: 350px;
     height: 354px;
-    /* background: rgba(239, 243, 40, 0.6); */
     background: rgba(236, 239, 87, 0.76);
     border-radius: 25px;
     transition: width 0.5s, height 0.5s;
@@ -133,9 +135,9 @@ body{
 /***************************** GERAL (TODOS OS PERSONAGENS) ******************************************/
 .foto {
     align-items: center;
-    width: 303px;
+    width: 309px;
     height: 282px;
-    margin-top: 20px;
+    margin-top: 23px;
 }
 
 .text {
@@ -145,11 +147,12 @@ body{
     font-family: 'Imprima', sans-serif;
     font-style: normal;
     font-size: 15px;
+    /* color: #FFFFFF; */
     color: #FFFFFF;
 }
 
 .titulo {
-    font-family: 'Imprima', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     color: #FFFFFF;
     font-size: 20px;
@@ -220,8 +223,9 @@ body{
 .personagem-howard:hover .text {
     opacity: 1;
 }
+
 /**************************** STUART BLOOM ******************************************/
-.personagem-stuart{
+.personagem-stuart {
     width: 350px;
     height: 354px;
     background: #B48D01;
@@ -230,6 +234,7 @@ body{
     position: relative;
     overflow: hidden;
 }
+
 .personagem-stuart:hover {
     transform: scale(1.1);
     height: 640px;
@@ -240,7 +245,7 @@ body{
 }
 
 /**************************** AMY ******************************************/
-.personagem-amy{
+.personagem-amy {
     width: 350px;
     height: 354px;
     background: rgba(255, 0, 184, 0.44);
@@ -249,6 +254,7 @@ body{
     position: relative;
     overflow: hidden;
 }
+
 .personagem-amy:hover {
     transform: scale(1.1);
     height: 550px;
@@ -257,8 +263,24 @@ body{
 .personagem-amy:hover .text {
     opacity: 1;
 }
-.rodape-personagens{
-    height: 892px;
-    margin-top: 84px;
-    width: 1518px;
+
+.rodape {
+    border-top: #FFFFFF solid 1px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.rodape-personagens {
+    width: 329px;
+    height: 132px;
+}
+
+.text-rodape {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
 }

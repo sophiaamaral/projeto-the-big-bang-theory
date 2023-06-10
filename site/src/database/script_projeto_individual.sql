@@ -22,6 +22,8 @@ CONSTRAINT fkUsuar FOREIGN KEY (fkUsuario)
 	REFERENCES usuario(idUsuario)
 );
 
+SELECT * FROM pontuacao_quiz;
+
 CREATE TABLE personagem (
 idPersonagem INT PRIMARY KEY AUTO_INCREMENT,
 personagemPreferido VARCHAR(45)
@@ -36,10 +38,13 @@ INSERT INTO personagem VALUES
 (NULL,'Bernadette Maryann'),
 (NULL,'Stuart Bloom');
 SELECT * FROM usuario;
+
 CREATE TABLE temporada (
 idTemporada INT PRIMARY KEY AUTO_INCREMENT,
 temporadaPreferido VARCHAR(45)
 );
+DROP TABLE temporada;
+
 INSERT INTO temporada VALUES
 (NULL,'1° Temporada'),
 (NULL,'2° Temporada'),
@@ -54,8 +59,14 @@ INSERT INTO temporada VALUES
 (NULL,'11° Temporada'),
 (NULL,'12° Temporada');
 
-
+SELECT * FROM temporada;
+SELECT * FROM personagem;
 SELECT * FROM usuario;
 
 SELECT COUNT(usuario.fkPersonagem) AS votos, personagem.personagemPreferido AS Personagem FROM usuario JOIN personagem
 ON idPersonagem = usuario.fkPersonagem GROUP BY usuario.fkPersonagem;
+
+SELECT COUNT(usuario.fkTemporada) AS votos, temporada.temporadaPreferido AS Temporada FROM usuario JOIN temporada
+        ON idTemporada = usuario.fkTemporada GROUP BY temporadaPreferido;
+        
+	desc personagem;

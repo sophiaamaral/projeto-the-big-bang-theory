@@ -23,21 +23,23 @@
 <body>
     <main class="fundo-dash">
     <div class="cabecalho-quiz">
-        <img class="cabecalho-logo-quiz" src="logo.png" alt="logo_thebigbangtheory">
+        <img class="cabecalho-logo-quiz" src="assets/logo.png" alt="logo_thebigbangtheory">
         <div class="hello">
             <h3>Olá, <span id="b_usuario"></span></h3>
         </div>
         <a href="dashboard/dash-personagem.html">
             <button class="botao-cabecalho">Analytics</button>
         </a>
-        <button class="botao-cabecalho">Personagens</button>
+        <button class="botao-cabecalho" onclick="personagens()">Personagens</button>
         <button class="botao-cabecalho" onclick="limparSessao()">Sair</button>
     </div>
     <div class="janela">
         <div class="dash">
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="botao-dash-temporada" onclick="exibirDashTemporada()" id="btnAquario2">Temporada</button>
+                <a href="dash-temporada.html">
+                    <button class="botao-dash-temporada">Temporada</button>
+                </a>
             </div>
             <div id="graficos">
                 <div id="grafico1" class="display-block">
@@ -96,8 +98,8 @@
         var dados = {
             labels: [],
             datasets: [{
-                label: '',
-                data: []
+            label: '',
+            data: []
             },
             {
                 yAxisID: 'y-totalpersonagens',
