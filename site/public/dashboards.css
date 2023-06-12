@@ -136,3 +136,12 @@ canvas {
   background-color: #23308B;
   height: 745px;
 }
+.volta{
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-start;
+  align-items: center;
+}
+.voltar-icone{
+  color: aliceblue;
+}
