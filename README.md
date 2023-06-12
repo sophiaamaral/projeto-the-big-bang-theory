@@ -21,47 +21,10 @@ _O comando acima irá iniciar seu projeto e efetuar os comandos de acordo com a 
 
 4. Caso queira parar a execução, tecle **CTRL+C** no terminal em que o projeto está rodando.
 
-**Tabela para ajudar a fazer a associação**
-
-<table>
-  <tr>
-    <th>C.R.U.D</th>
-    <th>Ação</th>
-    <th>Tradução</th>
-    <th>Verbo HTTP *</th>
-    <th>Comando BD</th>
-  </tr>
-  <tr>
-    <td>C</td>
-    <td>Create</td>
-    <td>Criar</td>
-    <td>POST</td>
-    <td>INSERT</td>
-  </tr>
-  <tr>
-    <td>R</td>
-    <td>Read</td>
-    <td>Ler</td>
-    <td>GET</td>
-    <td>SELECT</td>
-  </tr>
-  <tr>
-    <td>U</td>
-    <td>Update</td>
-    <td>Atualizar</td>
-    <td>PUT</td>
-    <td>UPDATE</td>
-  </tr>
-  <tr>
-    <td>D</td>
-    <td>Delete</td>
-    <td>Deletar</td>
-    <td>DELETE</td>
-    <td>DELETE</td>
-  </tr>
-</table>
-
-
+**The Big Bang Theory - Sinopse**
+```
+Big Bang Theory conta a história de Sheldon e Leonard, dois físicos que moram no apartamento da frente da aspirante a atriz Penny. Fazem parte da turma de nerds também Howard e Raj. Juntos, os contrastes entre eles produzem muitas risadas.
+```
 ![image](https://uploads.jovemnerd.com.br/wp-content/uploads/2018/09/show_asset_01a7442c-6517-4db8-ab6d-04c95e868374_FULL.jpg)
 
 
