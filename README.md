@@ -22,9 +22,9 @@ _O comando acima irá iniciar seu projeto e efetuar os comandos de acordo com a 
 4. Caso queira parar a execução, tecle **CTRL+C** no terminal em que o projeto está rodando.
 
 **The Big Bang Theory - Sinopse**
-```
+
 Big Bang Theory conta a história de Sheldon e Leonard, dois físicos que moram no apartamento da frente da aspirante a atriz Penny. Fazem parte da turma de nerds também Howard e Raj. Juntos, os contrastes entre eles produzem muitas risadas.
-```
+
 ![image](https://uploads.jovemnerd.com.br/wp-content/uploads/2018/09/show_asset_01a7442c-6517-4db8-ab6d-04c95e868374_FULL.jpg)
 
 
