@@ -143,15 +143,22 @@
 
         console.log(JSON.stringify(dados));
 
-        const config = {
+        const config2 = {
             type: 'bar',
             data: dados,
+            options: {
+                plugins: {
+                    legend: {
+                        display:false,
+                    }
+                }
+            }
         };
 
         // Adicionando gráfico criado em div na tela
         let myChart = new Chart(
             document.getElementById(`myChartCanvas2`),
-            config
+            config2
         );
     }
 
