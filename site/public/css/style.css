@@ -218,6 +218,7 @@ body {
     font-size: 20px;
     line-height: 28px;
     color: #FFFFFF;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 /*.link-conta{
     font-family: 'Inter';
@@ -252,6 +253,7 @@ body {
     text-align: center;
     color: #FFFFFF;
     border: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 .caixa-login input{
     width: 383px;
@@ -259,6 +261,8 @@ body {
     background: rgba(231, 238, 240, 0.92);
     border-radius: 20px;
     border: none;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .caixa-login button{
     margin-top: 30px;
@@ -271,6 +275,7 @@ body {
     font-size: 20px;
     color: #FFFFFF;
     border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 /******************** CADASTRO ****************************/
 .conteudo-principal-usuario{
@@ -296,10 +301,9 @@ body {
     font-size: 20px;
     line-height: 28px;
     color: #FFFFFF;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
-.caixa-usuario input{
-    text-align: center;
-}
+
 .link-usuario{
     margin-left: 5px;
     font-family: 'Inter';
@@ -318,6 +322,7 @@ body {
     font-size: 20px;
     color: #FFFFFF;
     border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .caixa-usuario input{
     width: 383px;
@@ -325,6 +330,8 @@ body {
     background: rgba(231, 238, 240, 0.92);
     border-radius: 20px;
     border: none;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .opcoes{
     width: 383px;

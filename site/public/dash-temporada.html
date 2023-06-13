@@ -79,18 +79,18 @@
     window.onload = obterDadosGrafico(1);
 
 
-    function obterDadosGrafico(idAquario) {
+    function obterDadosGrafico(idTemporada) {
 
         if (proximaAtualizacao != undefined) {
             clearTimeout(proximaAtualizacao);
         }
 
 
-        fetch(`/medidas/Temporadas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/Temporadas/${idTemporada}`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    plotarGrafico(resposta, idAquario);
+                    plotarGrafico(resposta, idTemporada);
 
                 });
             } else {
@@ -105,7 +105,7 @@
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, idAquario) {
+    function plotarGrafico(resposta, idTemporada) {
         console.log('iniciando plotagem do gráfico...');
         let labels = [];
 
@@ -115,7 +115,6 @@
             datasets: [
                 {
                     label: '',
-
                     data: []
                 },
                 {
@@ -127,8 +126,6 @@
                 }
             ]
         };
-
-
 
 
         for (i = 0; i < resposta.length; i++) {
@@ -156,52 +153,6 @@
             document.getElementById(`myChartCanvas2`),
             config
         );
-
-        setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
-
-
-        // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
-        // buscando a última medida inserida em tabela contendo as capturas, 
-
-        //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
-        //     Para ajustar o "select", ajuste o comando sql em src/models
-        function atualizarGrafico(idAquario, dados) {
-
-            fetch(`/medidas/Temporadas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
-                if (response.ok) {
-                    response.json().then(function (novoRegistro) {
-
-                        console.log(`Dados recebidos Atualizar  Graficos: ${JSON.stringify(novoRegistro)}`);
-                        console.log(dados);
-
-                        for (i = 0; i < novoRegistro.length; i++) {
-                            var registro = novoRegistro[i];
-                            // tirando e colocando valores no gráfico
-                            dados.labels.shift(); // apagar o primeiro
-                            dados.labels.push(registro.Temporada);// incluir um novo momento
-
-                            dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-                            dados.datasets[0].data.push(registro.votos); // incluir uma nova medida de umidade
-
-                            dados.datasets[1].data.shift();
-                            dados.datasets[1].data.push(registro.votos);
-                        }
-
-                        // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                        proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
-                    });
-                } else {
-                    console.error('Nenhum dado encontrado ou erro na API');
-                    // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 200000);
-                }
-            })
-                .catch(function (error) {
-                    console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-                });
-
-        }
-
     }
 
 
