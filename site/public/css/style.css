@@ -155,7 +155,7 @@ body {
     align-items: center;
     justify-content: center;
     align-content:space-evenly;
-    height: 585px;
+    height: 700px;
     /*background: rgb(84,140,175);
     629ABB*/
     background: linear-gradient(138deg, rgb(39, 114, 161) 0%, rgba(161,218,238,1) 71%);
@@ -166,12 +166,6 @@ body {
     font-size: 40px;
     color: #000000;
 }
-/*.logo-e-trailer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content:space-evenly
-}*/
 /**************** FOOTER ********************************/
 .rodape{
     background: #61A7C1;
