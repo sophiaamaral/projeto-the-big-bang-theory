@@ -65,7 +65,8 @@
     let proximaAtualizacao;
 
     window.onload = obterDadosGrafico(1); //quando a página é completamente carregada, a função obterDadosGrafico(1) é executada.
-
+    // faz uma requisição à API para obter os dados do gráfico. 
+    //Se a resposta for bem-sucedida, os dados são passados para a função plotarGrafico
     function obterDadosGrafico(idPersonagem) {
 
         if (proximaAtualizacao != undefined) {
@@ -89,6 +90,7 @@
 
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página
+    //Em seguida, preenche o objeto dados com os dados da resposta, como as labels e os valores correspondentes.
     function plotarGrafico(resposta, idPersonagem) {
         console.log('iniciando plotagem do gráfico...');
         let labels = [];
@@ -134,7 +136,8 @@
                 }
             }
         };
-
+        //Por fim, o gráfico é renderizado em um elemento HTML. 
+        //Essas funções trabalham juntas para obter os dados da API e plotar o gráfico correspondente.  
         // Adicionando gráfico criado em div na tela
         let myChart = new Chart(
             document.getElementById(`myChartCanvas1`),
