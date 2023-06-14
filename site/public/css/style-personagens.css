@@ -73,20 +73,19 @@ body {
     height: 354px;
     background: #008880;
     border-radius: 25px;
-    transition: width 0.5s, height 0.5s;
-    /*deixa a mudança de altura suave*/
-    position: relative;
-    overflow: hidden;
+    transition: width 0.5s, height 0.5s; 
+    position: relative; 
+    overflow: hidden; 
 }
 
 .personagem-sheldon:hover {
-    transform: scale(1.1);
-    height: 650px;
+    transform: scale(1.1); 
+    height: 650px;  
 }
 
 
 .personagem-sheldon:hover .text {
-    opacity: 1;
+    opacity: 1; 
 }
 
 /**************************** LEONARD ******************************************/
@@ -117,19 +116,22 @@ body {
     height: 354px;
     background: rgba(68, 189, 240, 0.65);
     border-radius: 25px;
-    transition: width 0.5s, height 0.5s;
+    transition: width 0.5s, height 0.5s;/*especifica a duração de transição 
+    para as propriedades "width" e "height" quando houver uma mudança em seus valores */
     /*deixa a mudança de altura suave*/
-    position: relative;
-    overflow: hidden;
+    position: relative; /*permite que o elemento seja posicionado em relação à sua posição normal. */
+    overflow: hidden; /*O conteúdo que ultrapassar os limites do elemento será ocultado
+    , em vez de ser exibido fora dele. */
 }
 
 .personagem-penny:hover {
-    transform: scale(1.1);
-    height: 600px;
+    transform: scale(1.1); /*Aplica uma escala de 1.1 ao elemento, aumentando seu tamanho em 10%.*/
+    height: 600px; /*redefine a altura do elemento para 640 pixels quando o mouse está sobre ele, 
+    fazendo com que ele fique mais alto.*/
 }
 
 .personagem-penny:hover .text {
-    opacity: 1;
+    opacity: 1; /*tornando o texto visível.*/
 }
 
 /***************************** GERAL (TODOS OS PERSONAGENS) ******************************************/
@@ -141,8 +143,9 @@ body {
 }
 
 .text {
-    opacity: 0;
-    transition: opacity 0.3s;
+    opacity: 0; /*Define a opacidade do elemento como 0 (totalmente transparente), tornando-o inicialmente invisível.*/
+    transition: opacity 0.3s; /*duração de transição para a propriedade "opacity" quando houver uma mudança em seu valor. 
+    No caso, a transição será de 0.3 segundos.*/
     text-align: center;
     font-family: 'Imprima', sans-serif;
     font-style: normal;

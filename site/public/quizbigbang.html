@@ -145,27 +145,31 @@
     /**********************************CARROSSEL**********************************************************/
     var pergunta_atual = 0; //armazena o indice da pergunta atual
     var pergunta = []; // vetor que armazena todas as perguntas
-    var perguntas_question = document.getElementsByClassName('question');//puxa os elementos que estão na classe chamada question
+    var perguntas_question = document.getElementsByClassName('question');//puxa os elementos que possuem a classe chamada question
 
+    //Percorre os elementos selecionados e os adiciona ao vetor "pergunta"
     for (var i = 0; i < perguntas_question.length; i++) {
-      pergunta.push(perguntas_question[i])//puxa as perguntas da div para o vetor pergunta 
+      pergunta.push(perguntas_question[i])
     }
+
     //Determina a pergunta que deve ser exibida dentro do loop for
     function exibepergunta(pergunta_atual) { //Exibe a pergunta correspondente ao indice fornecido enquanto oculta as demais perguntas
       for (var i = 0; i < pergunta.length; i++) {//percorre cada elemento do vetor pergunta
         if (i == pergunta_atual) {
-          pergunta[i].style.display = 'block'; //define o estilo display como none ocultando todas as perguntas que não estão sendo exibidas
+          pergunta[i].style.display = 'block'; // Exibe a pergunta correspondente ao índice fornecido
         } else {
-          pergunta[i].style.display = 'none';
+          pergunta[i].style.display = 'none'; //define o estilo display como none ocultando todas as perguntas que não estão sendo exibidas
         }
       }
     }
-
+    // Função para exibir a pergunta anterior decrementando a pergunta atual
     function pergunta_anterior() {
-      if (pergunta_atual > 0) {
+      if (pergunta_atual > 0) { // se a pergunta_atual for maior que 0 é decrementado para a pergunta anterior
         pergunta_atual--;
-      } else {
+      } else { // se for menor que 0 significa que a pergunta_atual já é a primeira 
+        //do vetor, então pergunta_atual é definida como o índice da última pergunta
         pergunta_atual = pergunta.length - 1;
+        // Volta para a última pergunta do vetor
       }
       exibepergunta(pergunta_atual);
     }
@@ -174,10 +178,12 @@
       if (pergunta_atual < pergunta.length - 1) {
         pergunta_atual++;
       } else {
+        // Volta para a primeira pergunta do vetor
         pergunta_atual = 0;
       }
       exibepergunta(pergunta_atual);
     }
+    // Exibe a primeira pergunta na interface
     exibepergunta(pergunta_atual);
 
     /*************************VALIDAÇÕES PERGUNTAS**********************************/
